@@ -1,0 +1,103 @@
+/*
+
+---> google font ---> font-family: 'Montserrat', sans-serif; 
+*/
+
+body {
+    background: linear-gradient(-90deg, red, yellow);
+}
+/*
+---> CSS Grid Display <---
+*/ 
+.wrapper {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 100px 50px 50px 50px 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h1 {
+    grid-area: 1 / 1 / span 1 / span 5;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    border-bottom: 2px solid chocolate;
+}
+
+.home {
+    grid-area: 2 / 1 / 3 / span 1;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    /* --> This helps with transitions for animation <-- */
+    transition: all 0.3s ease-in-out;
+}
+
+.home::after {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.home:hover {
+    transform: scale(1.0, 1.2);
+}
+
+.home:hover::after {
+    opacity: 1;
+}
+
+.about {
+    grid-area: 3 / 1 / 4 / span 1;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.about::after {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.about:hover {
+    transform: scale(1.0, 1.2);
+}
+
+.about:hover::after {
+    opacity: 1;
+}
+
+.contact {
+    grid-area: 4 / 1 / 5 / span 1;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    transition: 0.3s ease-in-out;
+}
+
+.contact::after {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contact:hover {
+    transform: scale(1.0, 1.2);
+}
+
+.contact:hover::after {
+    opacity: 1;
+}
+
+.media {
+    grid-area: 5 / 1 / 6 / span 1;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    transition: 0.3s ease-in-out;
+}
+
+.media::after {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.media:hover {
+    transform: scale(1.0, 1.2);
+}
+
+.media:hover::after {
+    opacity: 1;
+}
+
